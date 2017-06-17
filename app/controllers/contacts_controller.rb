@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     if params[:back]
       @contacts = Contact.new(contacts_params)
