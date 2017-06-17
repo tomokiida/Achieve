@@ -10,7 +10,7 @@
   password = "password"
   user = Faker::Internet.user_name
   User.create!(email: email,
-               user: user,
+               name: user,
                password: password,
                password_confirmation: password,
                )
