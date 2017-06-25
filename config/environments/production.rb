@@ -88,7 +88,7 @@ ActionMailer::Base.smtp_settings =
  authentication: :plain,
  enable_starttls_auto: true
 }
-config.action_mailer.default_url_options = { host: 'rocky-temple-82185.herokuapp.com/' }
+config.action_mailer.default_url_options = { host: 'https://rocky-temple-82185.herokuapp.com/' }
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
