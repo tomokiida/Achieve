@@ -1,0 +1,5 @@
+<% @poems.each do |poem| %>
+  <h4><strong><%= poem.title %></strong></h4>
+  <p><%= poem.content %></p>
+  <%= link_to "詳細", poem_path(poem.id), class: 'btn btn-default btn-sm btn-success' %>
+<% end %>
