@@ -1,13 +1,13 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
 <p><%= notice %></p>
-<%= form_for(@contacts, url: choose_new_or_edit2) do |f| %>
-  <% if @contacts.errors.any? %>
+<%= form_for(@contact, url: choose_new_or_edit2) do |f| %>
+  <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @contacts.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
 
       <ul>
-      <% @contacts.errors.full_messages.each do |msg| %>
+      <% @contact.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
