@@ -49,6 +49,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 gem 'rails_12factor', group: :production
 gem 'devise'
@@ -63,3 +64,8 @@ gem 'activeresource'
 gem 'her'
 gem "faraday_middleware"
 gem "simple_oauth"
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'mini_magick'
