@@ -1,0 +1,10 @@
+<% user=User.find(params[:id]) %>
+<div class="container">
+  <h2>ユーザー</h2>
+ 	<center>
+ 	<%= profile_img(user) %>
+  	<%= user.email %>
+  	</center>
+  
+  	<%= render partial: "userfollow_form" %>
+</div>
