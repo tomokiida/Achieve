@@ -1,0 +1,21 @@
+<h2>お知らせ</h2>
+<table class="table table-striped">
+  <tbody>
+  <% @notifications.each do |notification| %>
+    <tr>
+      <% if notification.read %>
+        <td>既読</td>
+      <% else %>
+        <td>未読</td>
+      <% end %>
+        <td>
+        <%= notification.comment.user.try(:name) %>さんが
+        あなたのブログ（<%= link_to "#{notification.comment.blog.title}", blog_path(notification.comment.blog, notification_id: notification.id) %>）にコメントしました。
+      </td>
+      <td>
+      <p><%= notification.created_at %></p>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
