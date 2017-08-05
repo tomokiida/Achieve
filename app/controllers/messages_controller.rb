@@ -1,8 +1,9 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
   before_action do
     @conversation = Conversation.find(params[:conversation_id])
   end
-  
+
   def index
     @messages = @conversation.messages
     if @messages.length > 10
@@ -30,7 +31,7 @@ class MessagesController < ApplicationController
       redirect_to conversation_messages_path(@conversation)
     end
   end
-  
+
   private
   def message_params
     params.require(:message).permit(:body, :user_id)
