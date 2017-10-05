@@ -35,9 +35,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'pry-doc'    # methodを表示
@@ -54,6 +51,7 @@ end
 
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
+
 group :development do
   gem 'letter_opener_web'
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -62,6 +60,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
 group :test do
   gem "capybara"
   gem "database_cleaner"
